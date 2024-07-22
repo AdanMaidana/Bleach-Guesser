@@ -2,7 +2,7 @@ const BleachCharacters = [
   
     //HOMBRES
     {
-      "imagen": "/images/ichigo.webp",
+      "imagen": "/dist/images/ichigo.webp",
       "nombre": "Ichigo Kurosaki",
       "genero": "Masculino",
       "grupo": ["Shinigami"],
@@ -12,7 +12,7 @@ const BleachCharacters = [
       "arco de aparicion": "Shinigami Sustituto",
     },
     {
-      "imagen": "/images/sado.webp",
+      "imagen": "dist/images/sado.webp",
       "nombre": "Sado Yasutora",
       "genero": "Masculino",
       "grupo": ["Humano"],
@@ -23,7 +23,7 @@ const BleachCharacters = [
     },
     // Agrega más personajes masculinos aquí
     {
-      "imagen": "/images/ishida.webp",
+      "imagen": "/dist/images/ishida.webp",
       "nombre": "Uryū Ishida",
       "genero": "Masculino",
       "grupo": ["Quincy"],
@@ -33,7 +33,7 @@ const BleachCharacters = [
       "arco de aparicion": "Shinigami Sustituto"
     },
     {
-      "imagen": "/images/urahara.webp",
+      "imagen": "/dist/images/urahara.webp",
       "nombre": "Urahara Kisuke",
       "genero": "Masculino",
       "grupo": ["Ex-Shinigami"],
@@ -46,7 +46,7 @@ const BleachCharacters = [
 
     //MUJERES
     {
-      "imagen": "/images/orihime.webp",
+      "imagen": "/dist/images/orihime.webp",
       "nombre": "Orihime Inoue",
       "genero": "Femenino",
       "grupo": ["Humano"],
