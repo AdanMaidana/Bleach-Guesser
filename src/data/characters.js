@@ -12,7 +12,7 @@ const BleachCharacters = [
       "arco de aparicion": "Shinigami Sustituto",
     },
     {
-      "imagen": "Bleach-Guesser/images/sado.webp",
+      "imagen": "/Bleach-Guesser/images/sado.webp",
       "nombre": "Sado Yasutora",
       "genero": "Masculino",
       "grupo": ["Humano"],
