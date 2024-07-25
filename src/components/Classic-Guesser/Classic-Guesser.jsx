@@ -57,7 +57,7 @@ const ClassicGuesser = () => {
     if (tableElement) {
       const tbody = tableElement.querySelector("tbody");
       const newRows = tbody.querySelectorAll('tr');
-
+  
       newRows.forEach((row) => {
         const cells = row.querySelectorAll('td');
         cells.forEach((cell, index) => {
@@ -65,7 +65,7 @@ const ClassicGuesser = () => {
             cell.classList.add('animated');
             cell.classList.remove("opacity-0");
             cell.classList.add('fade-in');
-
+            
             // Configura el retraso de la animación
             const delay = index * 0.7; // Ajusta el retraso según sea necesario
             cell.style.animationDelay = `${delay}s`;
@@ -125,15 +125,7 @@ const ClassicGuesser = () => {
             className="bg-orange-700 w-full flex items-center mx-auto hover:bg-opacity-85 transition-colors hover:cursor-pointer p-1"
             onClick={() => handleCharacterClick(character)}
           >
-            {character.imagen ? <img src={character.imagen} alt={character.nombre} className="w-16 h-16 border-2 border-black" />
-
-              :
-              <svg className="animate-spin ms-4 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-            }
-
+            <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] bg-zinc-800 border-2 border-black" />
             <p className="text-white w-full text-center">{character.nombre}</p>
           </li>
         ))}
@@ -159,8 +151,8 @@ const ClassicGuesser = () => {
             <tbody>
               {answers.map((character) => (
                 <tr key={character.nombre}>
-                  <td className="border-2 p-2 min-w-24 opacity-0 bg-zinc-800">
-                    <img src={character.imagen} alt={character.nombre} className="w-16 h-16 border-2 mx-auto mb-1" />
+                <td className="border-2 p-2 min-w-24 opacity-0 bg-zinc-800">
+                    <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] border-2 mx-auto mb-1" />
                     <p className="text-center w-full">{character.nombre}</p>
                   </td>
 
