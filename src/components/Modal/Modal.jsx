@@ -18,7 +18,7 @@ export default function Modal( {character, entries} ) {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <img src="../../../public/gifs/ichigo_confused.gif" className="w-ful" alt="" />
+                  <img src="/Bleach-Guesser/gifs/ichigo_confused.gif" className="w-ful" alt="" />
                   <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
                     El personaje a adivinar era <span className="italic font-bold">{character.nombre}</span>
                   </p>
