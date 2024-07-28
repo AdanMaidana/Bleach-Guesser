@@ -1,6 +1,7 @@
 import "./Classic-Guesser.css";
 import { useEffect, useState, useRef } from "react";
 import BleachCharacters from "../../data/characters.js";
+import Modal from "../Modal/Modal.jsx";
 
 const ClassicGuesser = () => {
   const [characterToFind, setCharacterToFind] = useState("");
@@ -57,7 +58,7 @@ const ClassicGuesser = () => {
     if (tableElement) {
       const tbody = tableElement.querySelector("tbody");
       const newRows = tbody.querySelectorAll('tr');
-  
+
       newRows.forEach((row) => {
         const cells = row.querySelectorAll('td');
         cells.forEach((cell, index) => {
@@ -65,7 +66,7 @@ const ClassicGuesser = () => {
             cell.classList.add('animated');
             cell.classList.remove("opacity-0");
             cell.classList.add('fade-in');
-            
+
             // Configura el retraso de la animación
             const delay = index * 0.7; // Ajusta el retraso según sea necesario
             cell.style.animationDelay = `${delay}s`;
@@ -110,6 +111,11 @@ const ClassicGuesser = () => {
 
   return (
     <>
+      {answers.includes(characterToFind) &&
+        <Modal character={characterToFind} entries={answers.length} />
+      }
+
+
       <input
         value={userInput}
         placeholder="Ingrese el nombre del personaje"
@@ -131,51 +137,54 @@ const ClassicGuesser = () => {
         ))}
       </ul>
 
-      <h3 className="text-center text-white font-bold text-xl w-full max-w-[600px] mx-auto my-2">Tus respuestas</h3>
+
 
       {answers.length > 0 &&
-        <div className="overflow-x-auto w-full">
-          <table ref={tableRef} className="text-white mx-auto text-center">
-            <thead className="bg-zinc-800">
-              <tr>
-                <th className="border-2 p-2 min-w-24">Personaje</th>
-                <th className="border-2 p-2 min-w-24">Género</th>
-                <th className="border-2 p-2 min-w-32">Grupo</th>
-                <th className="border-2 p-2 min-w-32">Rol</th>
-                <th className="border-2 p-2 min-w-32">Habilidades</th>
-                <th className="border-2 p-2 min-w-24">Región</th>
-                <th className="border-2 p-2 min-w-24">Arco de aparición</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {answers.map((character) => (
-                <tr key={character.nombre}>
-                <td className="border-2 p-2 min-w-24 opacity-0 bg-zinc-800">
-                    <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] border-2 mx-auto mb-1" />
-                    <p className="text-center w-full">{character.nombre}</p>
-                  </td>
-
-                  <td className={`border-2 p-2 min-w-24 opacity-0 ${character.genero === characterToFind.genero ? "bg-green-600" : "bg-red-800"} `}>{character.genero}</td>
-
-                  <td
-                    className={`border-2 p-2 min-w-24 opacity-0 ${getGrupoClassName(character.grupo, characterToFind.grupo)} `}
-                  >
-                    {character.grupo}
-                  </td>
-
-                  <td className={`border-2 p-2 min-w-24 opacity-0 ${character.rol === characterToFind.rol ? "bg-green-600" : "bg-red-800"} `}>{character.rol}</td>
-
-                  <td className={`border-2 p-2 min-w-24 opacity-0 ${getHabilidadesClassName(character.habilidades, characterToFind.habilidades)} `}>{character.habilidades.join(", ")}</td>
-
-                  <td className={`border-2 p-2 min-w-24 opacity-0 ${character.region === characterToFind.region ? "bg-green-600" : "bg-red-800"} `}>{character.region}</td>
-
-                  <td className={`border-2 p-2 min-w-24 opacity-0 ${character["arco de aparicion"] === characterToFind["arco de aparicion"] ? "bg-green-600" : "bg-red-800"} `}>{character["arco de aparicion"]}</td>
+        <>
+          <h3 className="text-center text-white font-bold text-xl w-full max-w-[600px] mx-auto my-2">Tus respuestas</h3>
+          <div className="overflow-x-auto w-full">
+            <table ref={tableRef} className="text-white mx-auto text-center">
+              <thead className="bg-zinc-800">
+                <tr>
+                  <th className="border-2 p-2 min-w-24">Personaje</th>
+                  <th className="border-2 p-2 min-w-24">Género</th>
+                  <th className="border-2 p-2 min-w-32">Grupo</th>
+                  <th className="border-2 p-2 min-w-32">Rol</th>
+                  <th className="border-2 p-2 min-w-32">Habilidades</th>
+                  <th className="border-2 p-2 min-w-24">Región</th>
+                  <th className="border-2 p-2 min-w-24">Arco de aparición</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+
+              <tbody>
+                {answers.map((character) => (
+                  <tr key={character.nombre}>
+                    <td className="border-2 p-2 min-w-24 opacity-0 bg-zinc-800">
+                      <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] border-2 mx-auto mb-1" />
+                      <p className="text-center w-full">{character.nombre}</p>
+                    </td>
+
+                    <td className={`border-2 p-2 min-w-24 opacity-0 ${character.genero === characterToFind.genero ? "bg-green-600" : "bg-red-800"} `}>{character.genero}</td>
+
+                    <td
+                      className={`border-2 p-2 min-w-24 opacity-0 ${getGrupoClassName(character.grupo, characterToFind.grupo)} `}
+                    >
+                      {character.grupo}
+                    </td>
+
+                    <td className={`border-2 p-2 min-w-24 opacity-0 ${character.rol === characterToFind.rol ? "bg-green-600" : "bg-red-800"} `}>{character.rol}</td>
+
+                    <td className={`border-2 p-2 min-w-24 opacity-0 ${getHabilidadesClassName(character.habilidades, characterToFind.habilidades)} `}>{character.habilidades.join(", ")}</td>
+
+                    <td className={`border-2 p-2 min-w-24 opacity-0 ${character.region === characterToFind.region ? "bg-green-600" : "bg-red-800"} `}>{character.region}</td>
+
+                    <td className={`border-2 p-2 min-w-24 opacity-0 ${character["arco de aparicion"] === characterToFind["arco de aparicion"] ? "bg-green-600" : "bg-red-800"} `}>{character["arco de aparicion"]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
       }
     </>
   );
