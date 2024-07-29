@@ -1,7 +1,7 @@
 import "./Classic-Guesser.css";
 import { useEffect, useState, useRef } from "react";
 import BleachCharacters from "../../data/characters.js";
-import Modal from "../Modal/Modal.jsx";
+import Modal from "../../../public/images/characters/Modal.jsx";
 
 const ClassicGuesser = () => {
   const [characterToFind, setCharacterToFind] = useState("");
@@ -116,35 +116,38 @@ const ClassicGuesser = () => {
       }
 
 
-      <input
-        value={userInput}
-        placeholder="Ingrese el nombre del personaje"
-        className="w-full max-w-[300px] px-3 py-2 mx-auto block outline-none border-4 border-orange-700"
-        onChange={handleInputChange}
-        maxLength={30}
-      />
+      <div className="relative">
+        <input
+          value={userInput}
+          placeholder="Ingrese el nombre del personaje"
+          className="w-full max-w-[300px] px-3 py-2 mx-auto block outline-none border-4 border-orange-700"
+          onChange={handleInputChange}
+          maxLength={30}
+        />
 
-      <ul className="h-full max-h-[300px] w-full max-w-[300px] mx-auto overflow-y-auto">
-        {filteredCharacters?.map((character, index) => (
-          <li
-            key={index}
-            className="bg-orange-700 w-full flex items-center mx-auto hover:bg-opacity-85 transition-colors hover:cursor-pointer p-1"
-            onClick={() => handleCharacterClick(character)}
-          >
-            <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] bg-zinc-800 border-2 border-black" />
-            <p className="text-white w-full text-center">{character.nombre}</p>
-          </li>
-        ))}
-      </ul>
+        <ul className="h-full max-h-[249px] w-full max-w-[300px] mx-auto overflow-y-auto">
+          {filteredCharacters?.map((character, index) => (
+            <li
+              key={index}
+              className="bg-orange-700 w-full flex items-center mx-auto hover:bg-orange-800 transition-colors hover:cursor-pointer p-1"
+              onClick={() => handleCharacterClick(character)}
+            >
+              <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] bg-zinc-800 border-2 border-black" />
+              <p className="text-white w-full text-center">{character.nombre}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
 
 
 
       {answers.length > 0 &&
         <>
-          <h3 className="text-center text-white font-bold text-xl w-full max-w-[600px] mx-auto my-2">Tus respuestas</h3>
-          <div className="overflow-x-auto w-full">
+          <h3 className="text-center text-white font-bold text-xl mx-auto my-2">Tus respuestas</h3>
+          <div className="overflow-x-auto mx-auto w-full ">
             <table ref={tableRef} className="text-white mx-auto text-center">
-              <thead className="bg-zinc-800">
+              <thead className="bg-zinc-900">
                 <tr>
                   <th className="border-2 p-2 min-w-24">Personaje</th>
                   <th className="border-2 p-2 min-w-24">Género</th>
@@ -158,8 +161,8 @@ const ClassicGuesser = () => {
 
               <tbody>
                 {answers.map((character) => (
-                  <tr key={character.nombre}>
-                    <td className="border-2 p-2 min-w-24 opacity-0 bg-zinc-800">
+                  <tr key={character.nombre} className="bg-zinc-900">
+                    <td className="border-2 p-2 min-w-24 opacity-0 bg-zinc-900">
                       <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] border-2 mx-auto mb-1" />
                       <p className="text-center w-full">{character.nombre}</p>
                     </td>

@@ -11,3 +11,24 @@
     opacity: 1;
   }
 }
+
+h3 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 100;
+  padding: 0 .5rem;
+}
+
+
+h3::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black; 
+    filter: blur(10px);
+    z-index: -1;
+  }

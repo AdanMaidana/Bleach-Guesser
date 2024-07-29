@@ -2,7 +2,7 @@ const BleachCharacters = [
 
   //HOMBRES
   {
-    "imagen": "/Bleach-Guesser/images/ichigo.webp",
+    "imagen": "/Bleach-Guesser/images/characters/ichigo.webp",
     "nombre": "Ichigo Kurosaki",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -13,7 +13,7 @@ const BleachCharacters = [
   },
   //AMIGOS DE ICHIGO
   {
-    "imagen": "/Bleach-Guesser/images/sado.webp",
+    "imagen": "/Bleach-Guesser/images/characters/sado.webp",
     "nombre": "Yasutora Sado",
     "genero": "Masculino",
     "grupo": ["Humano"],
@@ -23,7 +23,7 @@ const BleachCharacters = [
     "arco de aparicion": "Shinigami Sustituto"
   },
   {
-    "imagen": "/Bleach-Guesser/images/ishida.webp",
+    "imagen": "/Bleach-Guesser/images/characters/ishida.webp",
     "nombre": "Uryū Ishida",
     "genero": "Masculino",
     "grupo": ["Quincy"],
@@ -34,7 +34,7 @@ const BleachCharacters = [
   },
   //EX-SHINIGAMIS
   {
-    "imagen": "/Bleach-Guesser/images/urahara.webp",
+    "imagen": "/Bleach-Guesser/images/characters/urahara.webp",
     "nombre": "Kisuke Urahara",
     "genero": "Masculino",
     "grupo": ["Ex-Shinigami"],
@@ -45,7 +45,7 @@ const BleachCharacters = [
   },
   //CAPITANES
   {
-    "imagen": "/Bleach-Guesser/images/yamamoto.webp",
+    "imagen": "/Bleach-Guesser/images/characters/yamamoto.webp",
     "nombre": "Genryūsai Yamamoto",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -55,7 +55,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/ukitake.webp",
+    "imagen": "/Bleach-Guesser/images/characters/ukitake.webp",
     "nombre": "Jūshirō Ukitake",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -65,7 +65,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/kyoraku.webp",
+    "imagen": "/Bleach-Guesser/images/characters/kyoraku.webp",
     "nombre": "Shunsui Kyōraku",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -75,7 +75,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/komamura.webp",
+    "imagen": "/Bleach-Guesser/images/characters/komamura.webp",
     "nombre": "Sajin Komamura",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -85,7 +85,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/kuchiki.webp",
+    "imagen": "/Bleach-Guesser/images/characters/kuchiki.webp",
     "nombre": "Byakuya Kuchiki",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -95,7 +95,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/kenpachi.webp",
+    "imagen": "/Bleach-Guesser/images/characters/kenpachi.webp",
     "nombre": "Kenpachi Zaraki",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -105,7 +105,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/kurotsuchi.webp",
+    "imagen": "/Bleach-Guesser/images/characters/kurotsuchi.webp",
     "nombre": "Mayuri Kurotsuchi",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -115,7 +115,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/hitsugaya.webp",
+    "imagen": "/Bleach-Guesser/images/characters/hitsugaya.webp",
     "nombre": "Tōshirō Hitsugaya",
     "genero": "Masculino",
     "grupo": ["Shinigami"],
@@ -129,7 +129,7 @@ const BleachCharacters = [
 
   //VILLANOS PRINCIPALES
   {
-    "imagen": "/Bleach-Guesser/images/aizen.webp",
+    "imagen": "/Bleach-Guesser/images/characters/aizen.webp",
     "nombre": "Sōsuke Aizen",
     "genero": "Masculino",
     "grupo": ["Ex-Shinigami"],
@@ -139,7 +139,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/tosen.webp",
+    "imagen": "/Bleach-Guesser/images/characters/tosen.webp",
     "nombre": "Kaname Tōsen",
     "genero": "Masculino",
     "grupo": ["Ex-Shinigami"],
@@ -149,7 +149,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/gin.webp",
+    "imagen": "/Bleach-Guesser/images/characters/gin.webp",
     "nombre": "Gin Ichimaru",
     "genero": "Masculino",
     "grupo": ["Ex-Shinigami"],
@@ -160,7 +160,7 @@ const BleachCharacters = [
   },
   //ESPADAS DE AIZEN
   {
-    "imagen": "/Bleach-Guesser/images/starrk.webp",
+    "imagen": "/Bleach-Guesser/images/characters/starrk.webp",
     "nombre": "Coyote Starrk",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -170,7 +170,7 @@ const BleachCharacters = [
     "arco de aparicion": "Hueco Mundo"
   },
   {
-    "imagen": "/Bleach-Guesser/images/baraggan.webp",
+    "imagen": "/Bleach-Guesser/images/characters/baraggan.webp",
     "nombre": "Baraggan Louisenbairn",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -180,7 +180,7 @@ const BleachCharacters = [
     "arco de aparicion": "Hueco Mundo"
   },
   {
-    "imagen": "/Bleach-Guesser/images/ulquiorra.webp",
+    "imagen": "/Bleach-Guesser/images/characters/ulquiorra.webp",
     "nombre": "Ulquiorra Cifer",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -190,7 +190,7 @@ const BleachCharacters = [
     "arco de aparicion": "Hueco Mundo"
   },
   {
-    "imagen": "/Bleach-Guesser/images/nnoitra.webp",
+    "imagen": "/Bleach-Guesser/images/characters/nnoitra.webp",
     "nombre": "Nnoitra Gilga",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -200,7 +200,7 @@ const BleachCharacters = [
     "arco de aparicion": "Hueco Mundo"
   },
   {
-    "imagen": "/Bleach-Guesser/images/grimmjow.webp",
+    "imagen": "/Bleach-Guesser/images/characters/grimmjow.webp",
     "nombre": "Grimmjow Jaegerjaquez",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -210,7 +210,7 @@ const BleachCharacters = [
     "arco de aparicion": "Hueco Mundo"
   },
   {
-    "imagen": "/Bleach-Guesser/images/zomari.webp",
+    "imagen": "/Bleach-Guesser/images/characters/zomari.webp",
     "nombre": "Zomari Rureaux",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -220,7 +220,7 @@ const BleachCharacters = [
     "arco de aparicion": "Hueco Mundo"
   },
   {
-    "imagen": "/Bleach-Guesser/images/szayelaporro.webp",
+    "imagen": "/Bleach-Guesser/images/characters/szayelaporro.webp",
     "nombre": "Szayelaporro Granz",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -230,7 +230,7 @@ const BleachCharacters = [
     "arco de aparicion": "Hueco Mundo"
   },
   {
-    "imagen": "/Bleach-Guesser/images/aaroniero.webp",
+    "imagen": "/Bleach-Guesser/images/characters/aaroniero.webp",
     "nombre": "Aaroniero Arruruerie",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -240,7 +240,7 @@ const BleachCharacters = [
     "arco de aparicion": "Hueco Mundo"
   },
   {
-    "imagen": "/Bleach-Guesser/images/yammy.webp",
+    "imagen": "/Bleach-Guesser/images/characters/yammy.webp",
     "nombre": "Yammy Llargo",
     "genero": "Masculino",
     "grupo": "Arrancar",
@@ -255,7 +255,7 @@ const BleachCharacters = [
   //MUJERES
   //AMIGAS DE ICHIGO
   {
-    "imagen": "/Bleach-Guesser/images/orihime.webp",
+    "imagen": "/Bleach-Guesser/images/characters/orihime.webp",
     "nombre": "Orihime Inoue",
     "genero": "Femenino",
     "grupo": ["Humano"],
@@ -266,7 +266,7 @@ const BleachCharacters = [
   },
   //CAPITANES
   {
-    "imagen": "/Bleach-Guesser/images/soifon.webp",
+    "imagen": "/Bleach-Guesser/images/characters/soifon.webp",
     "nombre": "Soifon",
     "genero": "Femenino",
     "grupo": ["Shinigami"],
@@ -276,7 +276,7 @@ const BleachCharacters = [
     "arco de aparicion": "Sociedad de Almas"
   },
   {
-    "imagen": "/Bleach-Guesser/images/unohana.webp",
+    "imagen": "/Bleach-Guesser/images/characters/unohana.webp",
     "nombre": "Retsu Unohana",
     "genero": "Femenino",
     "grupo": ["Shinigami"],
@@ -287,7 +287,7 @@ const BleachCharacters = [
   },
   //ESPADAS DE AIZEN 
   {
-    "imagen": "/Bleach-Guesser/images/harribel.webp",
+    "imagen": "/Bleach-Guesser/images/characters/harribel.webp",
     "nombre": "Tier Harribel",
     "genero": "Femenino",
     "grupo": "Arrancar",
