@@ -117,7 +117,7 @@ const ClassicGuesser = () => {
       }
 
 <a 
-        href="./"
+        href="../"
           class="text-red-500 bg-gray-700 rounded font-bold p-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
         >
           Volver al menu
