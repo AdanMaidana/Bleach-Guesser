@@ -10,6 +10,7 @@ const ClassicGuesser = () => {
   const [answers, setAnswers] = useState([]);
   const tableRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
+  const [gameStatus, setGameStatus] = useState(true);
 
   // Manejar la lista de personajes a mostrar según lo que ingresa el usuario
   const handleInputChange = (event) => {
@@ -38,6 +39,15 @@ const ClassicGuesser = () => {
     setCharacterToFind(getRandomCharacter());
   }, []);
 
+  //FUNCIÓN PARA QUE SE GENERE OTRO PERSONAJE Y SE BORREN TODOS LOS DATOS DEL VIEJO
+  const setNewCharacter = () => {
+    setShowModal(false);
+    setCharacterToFind(getRandomCharacter());
+    setFilteredCharacters([]);
+    setAnswers([]);
+    setGameStatus(true);
+  }
+
   // Qué hacer cuando el usuario selecciona un personaje
   const handleCharacterClick = (character) => {
     setUserInput("");
@@ -46,6 +56,7 @@ const ClassicGuesser = () => {
     if (character === characterToFind) {
       // Actualizar el estado de personajes guardados
       setAnswers([character, ...answers]);
+      setGameStatus(false);
       setShowModal(true);
     } else {
       // Actualizar el estado de personajes guardados
@@ -76,7 +87,6 @@ const ClassicGuesser = () => {
       });
     }
   }, [answers]);
-
 
   // Color del fondo de la celda Grupo
   const getGrupoClassName = (characterGrupo, characterToFindGrupo) => {
@@ -112,17 +122,11 @@ const ClassicGuesser = () => {
 
   return (
     <>
+
+
       {showModal &&
-        <Modal character={characterToFind} entries={answers.length} setShowModal={setShowModal} />
+        <Modal character={characterToFind} entries={answers.length} setShowModal={setShowModal} setNewCharacter={setNewCharacter} />
       }
-
-<a 
-        href="../"
-          class="text-red-500 bg-gray-700 rounded font-bold p-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
-        >
-          Volver al menu
-        </a>
-
 
       <div className="relative w-full max-w-[300px] mx-auto">
         <input
@@ -131,6 +135,7 @@ const ClassicGuesser = () => {
           className="w-full max-w-[300px] px-3 py-2 mx-auto block outline-none border-4 border-orange-700"
           onChange={handleInputChange}
           maxLength={30}
+          disabled={!gameStatus}
         />
 
         <ul className="max-h-[249px] w-full max-w-[300px] mx-auto overflow-y-auto absolute z-[2000]">

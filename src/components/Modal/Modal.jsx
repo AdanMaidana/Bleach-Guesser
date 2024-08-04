@@ -1,4 +1,4 @@
-export default function Modal({ character, entries, setShowModal }) {
+export default function Modal({ character, entries, setShowModal, setNewCharacter }) {
   return (
     <>
       <div
@@ -24,16 +24,16 @@ export default function Modal({ character, entries, setShowModal }) {
             </div>
             {/*footer*/}
             <div className="flex items-center justify-end gap-x-2 p-4 border-t border-solid border-blueGray-200 rounded-b">
-            <a 
-        href="./"
-          class="text-red-500 bg-gray-700 rounded font-bold p-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
-        >
-          Volver al menu
-        </a>
+              <a
+                href="./"
+                class="text-white bg-gray-700 rounded font-bold p-2 text-sm ease-linear transition-all duration-150 hover:bg-gray-800"
+              >
+                Volver al menu
+              </a>
               <button
-                className="bg-emerald-500 text-white active:bg-emerald-600 font-bold text-sm p-2 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150"
+                className="bg-emerald-500 text-white active:bg-emerald-600 font-bold text-sm p-2 rounded shadow hover:shadow-lg ease-linear transition-all duration-150 hover:bg-emerald-600"
                 type="button"
-                onClick={() => setShowModal(false)}
+                onClick={() => setNewCharacter()}
               >
                 Nuevo personaje
               </button>
