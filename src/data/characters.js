@@ -124,9 +124,47 @@ const BleachCharacters = [
     "region": "Sociedad de Almas",
     "arco de aparicion": "Sociedad de Almas"
   },
-
-
-
+  //TENIENTES
+  {
+    "imagen": "/Bleach-Guesser/images/characters/kira.webp",
+    "nombre": "Izuru Kira",
+    "genero": "Masculino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada", "Kido"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
+  {
+    "imagen": "/Bleach-Guesser/images/characters/iba.webp",
+    "nombre": "Tetsuzaemon Iba",
+    "genero": "Masculino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
+  {
+    "imagen": "/Bleach-Guesser/images/characters/renji.webp",
+    "nombre": "Renji Abarai",
+    "genero": "Masculino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada", "Kido"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
+  {
+    "imagen": "/Bleach-Guesser/images/characters/hisagi.webp",
+    "nombre": "Shūhei Hisagi",
+    "genero": "Masculino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada", "Kido"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
   //VILLANOS PRINCIPALES
   {
     "imagen": "/Bleach-Guesser/images/characters/aizen.webp",
@@ -205,7 +243,7 @@ const BleachCharacters = [
     "genero": "Masculino",
     "grupo": "Arrancar",
     "rol": "Espada",
-    "habilidades": ["Espada", "Cuerpo a cuerpo" ,"Cero"],
+    "habilidades": ["Espada", "Cuerpo a cuerpo", "Cero"],
     "region": "Hueco Mundo",
     "arco de aparicion": "Hueco Mundo"
   },
@@ -282,6 +320,67 @@ const BleachCharacters = [
     "grupo": ["Shinigami"],
     "rol": "Capitán",
     "habilidades": ["Espada", "Kido", "Sanación"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
+  //TENIENTES
+  {
+    "imagen": "/Bleach-Guesser/images/characters/rukia.webp",
+    "nombre": "Rukia Kuchiki",
+    "genero": "Femenino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada", "Kido"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Shinigami Sustituto"
+  },
+  {
+    "imagen": "/Bleach-Guesser/images/characters/matsumoto.webp",
+    "nombre": "Rangiku Matsumoto",
+    "genero": "Femenino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada", "Kido"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
+  {
+    "imagen": "/Bleach-Guesser/images/characters/hinamori.webp",
+    "nombre": "Momo Hinamori",
+    "genero": "Femenino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada", "Kido"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
+  {
+    "imagen": "/Bleach-Guesser/images/characters/yachiru.webp",
+    "nombre": "Yachiru Kusajishi",
+    "genero": "Femenino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
+  {
+    "imagen": "/Bleach-Guesser/images/characters/nanao.webp",
+    "nombre": "Nanao Ise",
+    "genero": "Femenino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Kido"],
+    "region": "Sociedad de Almas",
+    "arco de aparicion": "Sociedad de Almas"
+  },
+  {
+    "imagen": "/Bleach-Guesser/images/characters/nemu.webp",
+    "nombre": "Nemu Kurotsuchi",
+    "genero": "Femenino",
+    "grupo": ["Shinigami"],
+    "rol": "Teniente",
+    "habilidades": ["Espada", "Kido"],
     "region": "Sociedad de Almas",
     "arco de aparicion": "Sociedad de Almas"
   },

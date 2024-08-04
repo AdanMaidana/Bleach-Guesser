@@ -1,7 +1,7 @@
 import "./Classic-Guesser.css";
 import { useEffect, useState, useRef } from "react";
 import BleachCharacters from "../../data/characters.js";
-import Modal from "../../../public/images/characters/Modal.jsx";
+import Modal from "../Modal/Modal.jsx";
 
 const ClassicGuesser = () => {
   const [characterToFind, setCharacterToFind] = useState("");
@@ -9,7 +9,7 @@ const ClassicGuesser = () => {
   const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [answers, setAnswers] = useState([]);
   const tableRef = useRef(null);
-  const [gameStatus, setGamesStatus] = useState("playing");
+  const [showModal, setShowModal] = useState(false);
 
   // Manejar la lista de personajes a mostrar según lo que ingresa el usuario
   const handleInputChange = (event) => {
@@ -46,6 +46,7 @@ const ClassicGuesser = () => {
     if (character === characterToFind) {
       // Actualizar el estado de personajes guardados
       setAnswers([character, ...answers]);
+      setShowModal(true);
     } else {
       // Actualizar el estado de personajes guardados
       setAnswers([character, ...answers]);
@@ -111,12 +112,19 @@ const ClassicGuesser = () => {
 
   return (
     <>
-      {answers.includes(characterToFind) &&
-        <Modal character={characterToFind} entries={answers.length} />
+      {showModal &&
+        <Modal character={characterToFind} entries={answers.length} setShowModal={setShowModal} />
       }
 
+<a 
+        href="./"
+          class="text-red-500 bg-gray-700 rounded font-bold p-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
+        >
+          Volver al menu
+        </a>
 
-      <div className="relative">
+
+      <div className="relative w-full max-w-[300px] mx-auto">
         <input
           value={userInput}
           placeholder="Ingrese el nombre del personaje"
@@ -125,14 +133,14 @@ const ClassicGuesser = () => {
           maxLength={30}
         />
 
-        <ul className="h-full max-h-[249px] w-full max-w-[300px] mx-auto overflow-y-auto">
+        <ul className="max-h-[249px] w-full max-w-[300px] mx-auto overflow-y-auto absolute z-[2000]">
           {filteredCharacters?.map((character, index) => (
             <li
               key={index}
               className="bg-orange-700 w-full flex items-center mx-auto hover:bg-orange-800 transition-colors hover:cursor-pointer p-1"
               onClick={() => handleCharacterClick(character)}
             >
-              <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] bg-zinc-800 border-2 border-black" />
+              <img loading="eager" src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] bg-zinc-800 border-2 border-black" />
               <p className="text-white w-full text-center">{character.nombre}</p>
             </li>
           ))}
@@ -140,12 +148,10 @@ const ClassicGuesser = () => {
       </div>
 
 
-
-
       {answers.length > 0 &&
         <>
-          <h3 className="text-center text-white font-bold text-xl mx-auto my-2">Tus respuestas</h3>
-          <div className="overflow-x-auto mx-auto w-full ">
+          <h3 className="answers-header text-center text-white font-bold text-xl mx-auto mt-6 mb-4">Tus respuestas</h3>
+          <div className="overflow-x-auto mx-auto w-full max-w-[840px]">
             <table ref={tableRef} className="text-white mx-auto text-center">
               <thead className="bg-zinc-900">
                 <tr>
@@ -164,7 +170,7 @@ const ClassicGuesser = () => {
                   <tr key={character.nombre} className="bg-zinc-900">
                     <td className="border-2 p-2 min-w-24 opacity-0 bg-zinc-900">
                       <img src={character.imagen} alt={character.nombre} className="w-[75px] h-[75px] border-2 mx-auto mb-1" />
-                      <p className="text-center w-full">{character.nombre}</p>
+                      {/* <p className="text-center w-full">{character.nombre}</p> */}
                     </td>
 
                     <td className={`border-2 p-2 min-w-24 opacity-0 ${character.genero === characterToFind.genero ? "bg-green-600" : "bg-red-800"} `}>{character.genero}</td>
@@ -181,7 +187,7 @@ const ClassicGuesser = () => {
 
                     <td className={`border-2 p-2 min-w-24 opacity-0 ${character.region === characterToFind.region ? "bg-green-600" : "bg-red-800"} `}>{character.region}</td>
 
-                    <td className={`border-2 p-2 min-w-24 opacity-0 ${character["arco de aparicion"] === characterToFind["arco de aparicion"] ? "bg-green-600" : "bg-red-800"} `}>{character["arco de aparicion"]}</td>
+                    <td className={`border-2 p-2 min-w-40 opacity-0 ${character["arco de aparicion"] === characterToFind["arco de aparicion"] ? "bg-green-600" : "bg-red-800"} `}>{character["arco de aparicion"]}</td>
                   </tr>
                 ))}
               </tbody>

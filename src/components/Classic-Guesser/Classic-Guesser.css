@@ -12,23 +12,22 @@
   }
 }
 
-h3 {
+.answers-header {
   position: relative;
   width: fit-content;
-  margin: 0 auto;
-  z-index: 100;
+  z-index: 0;
   padding: 0 .5rem;
 }
 
 
-h3::before {
+.answers-header::before {
     content: '';
     position: absolute;
     top: 5px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: black; 
-    filter: blur(10px);
+    background: rgb(0, 0, 0); 
+    filter: blur(6px);
     z-index: -1;
   }

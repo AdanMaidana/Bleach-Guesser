@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Bleach Guesser">
-  <main>
+  <main class="flex flex-col items-center justify-center min-h-screen">
     <h1 class="text-white text-center text-3xl">
       Bienvenido a <span class="text-yellow-500">Bleach Guesser</span>
     </h1>
@@ -12,16 +12,44 @@ import Layout from "../layouts/Layout.astro";
       Adivina los personajes de <span class="text-yellow-500">Bleach</span>
     </h2>
 
-    <ul class="flex justify-center items-center text-white">
-      <li>
+    <ul class="flex flex-col gap-y-4 justify-center items-center text-white">
+      <li class="w-full max-w-[250px]">
         <a
           href="./classic"
           class="block border-2 border-white p-2 rounded-md bg-orange-800"
         >
-          <span class="block text-xl mb-1">Modo clásico</span>
-          <span>Cada intento te dara más pistas</span>
+          <span class="block text-2xl font-semibold mb-1">Clásico</span>
+          <span class="font-thin">Cada intento te dara más pistas</span>
         </a>
       </li>
+     <li class="w-full max-w-[250px]">
+        <a
+          href="./classic"
+          class="block border-2 border-white p-2 rounded-md bg-orange-800"
+        >
+          <span class="block text-2xl font-semibold mb-1">Habilidad</span>
+          <span class="font-thin">A quien le pertenece la técnica</span>
+        </a>
+      </li>
+     <li class="w-full max-w-[250px]">
+        <a
+          href="./classic"
+          class="block border-2 border-white p-2 rounded-md bg-orange-800"
+        >
+          <span class="block text-2xl font-semibold mb-1">Imagen</span>
+          <span class="font-thin">Cada intento te dara más pistas</span>
+        </a>
+      </li>
+     <li class="w-full max-w-[250px]">
+        <a
+          href="./classic"
+          class="block border-2 border-white p-2 rounded-md bg-orange-800"
+        >
+          <span class="block text-2xl font-semibold mb-1">Modo clásico</span>
+          <span class="font-thin">Cada intento te dara más pistas</span>
+        </a>
+      </li>
+
     </ul>
   </main>
 </Layout>
@@ -46,7 +74,7 @@ import Layout from "../layouts/Layout.astro";
       left: 0;
       right: 0;
       bottom: 0;
-      background: black; 
+      background: #000; 
       filter: blur(10px);
       z-index: -1;
     }
