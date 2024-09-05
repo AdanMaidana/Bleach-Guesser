@@ -1,12 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ClassicGuesser from "../components/Classic-Guesser/Classic-Guesser.jsx";
-import Navbar from "../components/Navbar/Navbar.jsx";
+import Guesser from "../components/Guesser/Guesser.jsx";
 ---
 
 <Layout title="Bleach Guesser - Clásico">
-  <Navbar />
-  <main class="min-h-screen flex flex-col justify-start items-center p-4">
-    <ClassicGuesser client:load />
+  <main class="h-screen flex flex-col justify-start items-center p-4 overflow-y-auto">
+    <Guesser gameMode='Classic' client:load />
   </main>
 </Layout>

@@ -27,7 +27,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(0, 0, 0); 
-    filter: blur(6px);
+    background: rgb(18, 18, 18); 
+    filter: blur(10px);
     z-index: -1;
+  }
+
+  .relative:hover p {
+    display: block;
+    z-index: 30000;
+  }
+  
+  .popover-arrow {
+    background-color: inherit;
   }

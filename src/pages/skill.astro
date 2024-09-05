@@ -1,7 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Guesser from "../components/Guesser/Guesser";
 ---
 
 <Layout title="Bleach Guesser - Habilidad">
-
+  <main class="h-screen flex flex-col justify-start items-center p-4 overflow-y-auto">
+    <Guesser gameMode='Skill' client:load />
+  </main>
 </Layout>

@@ -1,0 +1,36 @@
+dialog {
+  width: 350px;
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 2px solid orange;
+  opacity: 0;
+  scale: 0.7;
+  transition: display .3s, overlay .3s, opacity .3s, scale .3s;
+  transition-behavior: allow-discrete;
+
+  &[open] {
+    opacity: 1;
+    scale: 1;
+
+    &::backdrop {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    @starting-style {
+      opacity: 0;
+      scale: 0.7;
+
+      &::backdrop {
+        background:transparent;
+      }
+    }
+  }
+
+  &::backdrop {
+    background:transparent;
+    transition: background .3s;
+  }
+
+  
+}
